@@ -1,6 +1,21 @@
 {% load static %}
-<header>
-  <center>
+<div>
+<header class="text-center">
     <a href="{% url 'shop:AllProdCat' %}"> <img src="{% static 'img/logo1.png' %}" alt="logo pic" width="150"></a>
-  </center>
 </header>
+    <div>
+        <ul style="list-style-type:none;  position:absolute; top:5px; right:5px;">
+        <li>
+          <span class="span_class" style="position:absolute; right:0px;">
+          {% if user.is_authenticated %}
+            <p class="text text-success nav-item">Hi {{ user.first_name }}..</p>
+            <a href="{% url 'accounts:logout' %}"><button class="btn btn-danger">Logout</button></a>
+            {% else %}
+            <a href="{% url 'accounts:register' %}"><button class="btn btn-info mb-1">Register</button></a>
+            <a href="{% url 'accounts:login' %}"><button class="btn btn-info">Login</button></a>
+            {% endif %}
+          </span>
+        </li>
+        </ul>
+    </div>
+</div>

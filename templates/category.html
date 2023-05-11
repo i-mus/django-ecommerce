@@ -27,7 +27,7 @@
     </div>
 </div>
 {% endif %}
-<div class="mx_auto">
+<div class="mx-auto">
     {% if category %}
     <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
 </div><br>
@@ -48,11 +48,11 @@
 
     {% endif %}
 <div class="container">
-    <div class="row mx_auto">
+    <div class="row mx-auto">
     {% for product in products.object_list %}
     <div class="my_bottom_margin col-sm-12 col-md-4 col-lg-4">
     <div class="card text-center" style="">
-        <a href="{{product.get_url}}"><img class="card-img-top " width="200px" height="250px" src="{{ product.image.url }}" alt="{{ product.name }}"></a>
+        <a href="{{product.get_url}}"><img class="card-img-top " width="200px" height="250px" src="{{ product.image.url }}" ></a>
     </div>
     <div class="card-body">
         <h4>{{product.name}}</h4>

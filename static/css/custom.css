@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    padding-bottom: 30px;
 }
 .nav-item{
     letter-spacing : 0.2em;
@@ -18,16 +19,16 @@ body{
 
 .my_footer{
     background-color : #2b1f61;
-    height : 60px;
-    padding-top: 20px;
-    font-size: 14px;
+    width: 100%;
 
+
+    font-size: 14px;
 }
 /*** Category Page ***/
 .my_row{
     padding-top: 15px;
 }
-.my_row .mx_auto{
+.my_row .mx-auto{
     color : #000;
     font-size: 12px;
 }

@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
@@ -6,7 +7,7 @@ from django.core.paginator import Paginator, EmptyPage, InvalidPage
 
 # Create your views here.
 
-
+@login_required(login_url='accounts:login')
 def AllProdCat(request, c_slug=None):
     c_page = None
     products_list = None
@@ -26,7 +27,6 @@ def AllProdCat(request, c_slug=None):
         products = paginator.page(paginator.num_pages)
 
     return render(request, 'category.html', {'category': c_page, 'products': products})
-
 
 def proDetail(request, c_slug, product_slug):
     try:

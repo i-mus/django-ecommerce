@@ -1,9 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from shop.models import Product
 from django.db.models import Q
 # Create your views here.
 
-
+@login_required(login_url='accounts:login')
 def SearchResult(request):
     products = None
     query = None
